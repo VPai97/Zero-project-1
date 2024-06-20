@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Report Request Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        form {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Client Report Request Form</h1>
+    </header>
+    <div class="container">
+        <form>
+            <label for="reportType">Select Report Type:</label>
+            <select id="reportType" name="reportType">
+                <option value="ledger">Ledger</option>
+                <option value="tradebook">Tradebook</option>
+                <option value="taxPL">Tax P&L</option>
+                <option value="PL">P&L</option>
+            </select>
+
+            <label for="dateRange">Select Date Range:</label>
+            <input type="date" id="startDate" name="startDate"> - 
+            <input type="date" id="endDate" name="endDate">
+
+            <label for="clientID">Client ID:</label>
+            <input type="text" id="clientID" name="clientID" placeholder="Enter Client ID">
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" placeholder="Enter Email ID">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
